@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>{{ fontName }}</title>
+     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+      <style>
+
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 10px 20px;
+            text-align: center;
+            background:#f8f8f8;
+        }
+        
+        h1{
+            font-family:Whitney, Arial, Helvetica, sans-serif;
+        }
+
+        .preview {
+            width: 100px;
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .preview .inner {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            background: #fff;
+            -webkit-border-radius: 3px 3px 0 0;
+            -moz-border-radius: 3px 3px 0 0;
+            border-radius: 3px 3px 0 0;
+            color:#0B1F66;
+                border-left:1px solid #ddd;
+            border-top:1px solid #ddd;
+            border-right:1px solid #ddd;
+        }
+
+        .preview .inner {{ baseTag }} {
+            line-height: 85px;
+            font-size: 40px;
+            color: #333;
+        
+        }
+
+        .label {
+            display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 5px;
+            font-size: 10px;
+            font-family: Monaco, monospace;
+            color: #666;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            background: #f6f6f6;
+            -webkit-border-radius: 0 0 3px 3px;
+            -moz-border-radius: 0 0 3px 3px;
+            border-radius: 0 0 3px 3px;
+            color: #666;
+            border-bottom:1px solid #ddd;
+            border-left:1px solid #ddd;
+            border-right:1px solid #ddd;
+        }
+
+header{
+    background-color:#11172B;
+    padding:20px;
+    background-image:url("https://content.delta.com/content/dam/delta-applications/fresh-air-core/5.0.27/images/supergraphic-delta-mark_1600.svg");
+    background-repeat:no-repeat;
+    margin-top:-10px;
+    margin-left:-20px;
+    margin-right:-20px;
+    margin-bottom:30px;
+}
+
+.delta-mark{
+    float:left;
+}
+
+.skyteam{
+    padding-left:5px;
+}
+
+.font-download-area{
+    clear:both;
+    margin-bottom:30px;
+}
+        {{{ styles }}}
+
+    </style>
+
+    
+</head>
+<body>
+ <header>
+    <img class="siteLogo" src="http://content.delta.com/content/www/us/en.damAssetRender.20180509T1731290530400.html/content/dam/delta_homepage_redesign/Logo/Delta%20Logo.svg" alt="Delta Air Lines">
+    <img class="skyteam" src="http://content.delta.com/content/www/us/en.damAssetRender.20180509T1731290540400.html/content/dam/delta_homepage_redesign/Logo/Sky%20Team.svg" alt="Skyteam">
+   
+   <!-- Future Toggle Capability  
+       
+       <div class="btn-group btn-group-toggle" data-toggle="buttons">
+  <label class="btn btn-secondary active">
+    <input type="radio" name="options" id="option1" autocomplete="off" checked>Light
+  </label>
+  <label class="btn btn-secondary">
+    <input type="radio" name="options" id="option2" autocomplete="off">Dark
+  </label>
+</div>
+ -->
+
+</header>
+
+    <h1>{{ fontName }}</h1>
+
+<div class="font-download-area">
+ <a href="{{ fontName }}.woff" role="button" class="btn btn-light btn-sm" data-toggle="tooltip" data-placement="top" title="IE 9+, Chrome 5+, Firefox 3.6+, Safari 5.1+">
+        WOFF
+        </a>
+        <a href="{{ fontName }}.woff2" role="button" class="btn btn-light btn-sm" data-toggle="tooltip" data-placement="top" title="IE (not supported), Chrome 36+, Firefox (not supported by default)">
+         WOFF2 
+        </a>
+       <a href="{{ fontName }}.svg" role="button" class="btn btn-light btn-sm" data-toggle="tooltip" data-placement="top" title="IE (not supported), Chrome 4.0+, Firefox (not supported), Safari 3.2+">
+         SVG 
+        </a>
+      <a href="{{ fontName }}.eot" role="button" class="btn btn-light btn-sm" data-toggle="tooltip" data-placement="top" title="IE 6+, Chrome (not supported), Firefox (not supported), Safari (not supported)">
+         EOT
+        </a>
+         <a href="{{ fontName }}.ttf" role="button" class="btn btn-light btn-sm" data-toggle="tooltip" data-placement="top" title="IE 9+ (must be set to installable), Chrome 4+, Firefox 3.5+, Safari 3.1+">
+         TTF 
+        </a>
+         <a href="{{ fontName }}.css" role="button" class="btn btn-light btn-sm" data-toggle="tooltip" data-placement="top" title="Loads font files and maps classes to icons">
+         CSS 
+        </a>
+     <a href="{{ fontName }}.json" role="button" class="btn btn-light btn-sm" data-toggle="tooltip" data-placement="top" title="">
+         JSON 
+        </a>
+     </div>   
+
+    {{# each names }}
+
+        <div class="preview">
+            <span class="inner">
+                <{{ ../baseTag }} class="{{ ../classPrefix }}{{ this }}"></{{ ../baseTag }}>
+            </span>
+            <br>
+            <span class='label'>{{ this }}</span>
+        </div>
+
+    {{/ each }}
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script>
+    $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+</body>
+
+</html>
